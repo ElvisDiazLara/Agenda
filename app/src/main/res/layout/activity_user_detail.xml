@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserDetailActivity">
+
+    <ImageView
+        android:id="@+id/image_register_user"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="Nombres"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text_user_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_user_name" />
+
+    <EditText
+        android:id="@+id/edit_text_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:ems="5"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/image_register_user" />
+
+    <TextView
+        android:id="@+id/text_user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="Correo"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text_user_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_user_email" />
+
+    <EditText
+        android:id="@+id/edit_text_user_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/edit_text_user_name"
+        app:layout_constraintStart_toStartOf="@+id/edit_text_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_user_name" />
+
+    <TextView
+        android:id="@+id/text_user_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="Telefono"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text_user_phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_user_phone" />
+
+    <EditText
+        android:id="@+id/edit_text_user_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="@+id/edit_text_user_email"
+        app:layout_constraintStart_toStartOf="@+id/edit_text_user_email"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_user_email" />
+
+    <TextView
+        android:id="@+id/text_user_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="Direccion"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text_user_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_user_address" />
+
+    <EditText
+        android:id="@+id/edit_text_user_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edit_text_user_phone"
+        app:layout_constraintStart_toStartOf="@+id/edit_text_user_phone"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_user_phone" />
+
+    <TextView
+        android:id="@+id/text_user_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="Fecha de nacimiento"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text_user_birthday"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edit_text_user_birthday" />
+
+    <EditText
+        android:id="@+id/edit_text_user_birthday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edit_text_user_address"
+        app:layout_constraintStart_toEndOf="@+id/text_user_birthday"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_user_address" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_users"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_user_birthday">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

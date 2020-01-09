@@ -2,16 +2,9 @@ package com.udaff.agenda;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,32 +12,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
     }
 
 
-public void boton (View view){
+    public void button(View view) {
 
-switch (view.getId()){
+        switch (view.getId()) {
+            case R.id.button_register_user:
+                Intent register = new Intent(this, AddUserActivity.class);
+                startActivity(register);
+                break;
 
-    case R.id.btnGuardar:
-        Intent agregar = new Intent(this, Agregar_Persona.class);
-            startActivity(agregar);
-        break;
-
-    case R.id.btnListar:
-        Intent lista = new Intent(this, Lista_Persona.class);
-            startActivity(lista);
-        break;
-
+            case R.id.button_detail:
+                Intent detail = new Intent(this, UserDetailActivity.class);
+                startActivity(detail);
+                break;
 
 
         }
 
     }
-
 
 
 }
